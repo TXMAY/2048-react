@@ -1,16 +1,10 @@
 {
   "name": "2048",
   "version": "1.0.0",
-  "homepage": "https://TXMAY.github.io/2048-react/",
-  "description": "",
-  "keywords": [],
-  "main": "src/index.tsx",
+  "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "5.16.4",
-    "gh-pages": "4.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-scripts": "4.0.3",
     "tiny-invariant": "1.2.0",
     "use-debounce": "8.0.1",
     "web-vitals": "2.1.4"
@@ -24,12 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
