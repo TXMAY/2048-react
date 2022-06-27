@@ -1,7 +1,6 @@
 {
   "name": "2048",
   "version": "1.0.0",
-  "homepage": "https://TXMAY.github.io/2048-react-web/",
   "license": "MIT",
   "dependencies": {
     "react": "18.2.0",
