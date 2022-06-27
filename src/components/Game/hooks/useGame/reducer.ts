@@ -13,7 +13,7 @@ export const initialState: State = {
   tiles: {},
   byIds: [],
   hasChanged: false,
-  inMotion: false
+  inMotion: false,
 };
 
 type Action =
@@ -30,19 +30,19 @@ export const GameReducer = (state: State, action: Action) => {
         ...state,
         tiles: {
           ...state.tiles,
-          [action.tile.id]: action.tile
+          [action.tile.id]: action.tile,
         },
         byIds: [...state.byIds, action.tile.id],
-        hasChanged: false
+        hasChanged: false,
       };
     case "UPDATE_TILE":
       return {
         ...state,
         tiles: {
           ...state.tiles,
-          [action.tile.id]: action.tile
+          [action.tile.id]: action.tile,
         },
-        hasChanged: true
+        hasChanged: true,
       };
     case "MERGE_TILE":
       const {
@@ -57,21 +57,21 @@ export const GameReducer = (state: State, action: Action) => {
           [action.destination.id]: {
             id: action.destination.id,
             value: action.source.value + action.destination.value,
-            position: action.destination.position
-          }
+            position: action.destination.position,
+          },
         },
         byIds: state.byIds.filter((id) => id !== action.source.id),
-        hasChanged: true
+        hasChanged: true,
       };
     case "START_MOVE":
       return {
         ...state,
-        inMotion: true
+        inMotion: true,
       };
     case "END_MOVE":
       return {
         ...state,
-        inMotion: false
+        inMotion: false,
       };
     default:
       return state;

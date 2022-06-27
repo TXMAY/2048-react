@@ -3,7 +3,7 @@ import { tileCount as defaultTileCount } from "../index";
 
 export const BoardContext = React.createContext({
   containerWidth: 0,
-  tileCount: defaultTileCount
+  tileCount: defaultTileCount,
 });
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 export const BoardProvider = ({
   children,
   containerWidth = 0,
-  tileCount = defaultTileCount
+  tileCount = defaultTileCount,
 }: Props) => {
   return (
     <BoardContext.Provider value={{ containerWidth, tileCount }}>

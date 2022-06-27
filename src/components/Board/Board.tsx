@@ -7,11 +7,12 @@ import "./board.less";
 
 type Props = {
   tiles: TileMeta[];
-  tileTotalWidthPerRow: number;
+  tileCountPerRow: number;
 };
 
 export const Board = ({ tiles, tileCountPerRow = defaultTileCount }: Props) => {
   const containerWidth = tileTotalWidth * tileCountPerRow;
+
   const boardWidth = containerWidth + boardMargin;
 
   const tileList = tiles.map(({ id, ...restProps }) => (

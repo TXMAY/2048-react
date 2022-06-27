@@ -4,6 +4,7 @@ import { Game } from "./components/Game";
 
 import "./App.less";
 
+
 export const App = () => {
   const [date, setDate] = useState<Date>(new Date());
 
@@ -29,8 +30,8 @@ export const App = () => {
         </p>
         <ul>
           <li>
-            <a href="https://youtube/vI0QArPnkUc" target="_blank">
-              Tutorial (YouTuve video)
+            <a href="https://youtu.be/vI0QArPnkUc" target="_blank">
+              Tutorial (YouTube video)
             </a>
           </li>
           <li>
@@ -43,7 +44,7 @@ export const App = () => {
           </li>
           <li>
             <a
-              href="https://mateuszsokola.github.io/2048-animation-examples"
+              href="https://mateuszsokola.github.io/2048-animation-examples/"
               target="_blank"
             >
               Animation Examples (Github Pages)
@@ -69,3 +70,4 @@ export const App = () => {
     </div>
   );
 };
+

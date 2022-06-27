@@ -6,12 +6,15 @@ import "./tile.less";
 
 type Props = {
   value: number;
+
   position: [number, number];
+
   zIndex: number;
 };
 
 export const Tile = ({ value, position, zIndex }: Props) => {
   const [containerWidth, tileCount] = useBoard();
+
   const [scale, setScale] = useState(1);
 
   const previousValue = usePrevProps<number>(value);
@@ -21,7 +24,9 @@ export const Tile = ({ value, position, zIndex }: Props) => {
   invariant(withinBoardBoundaries, "Tile out of bound");
 
   const isNew = previousValue === undefined;
+
   const hasChanged = previousValue !== value;
+
   const shallHighlight = isNew || hasChanged;
 
   useEffect(() => {
@@ -31,6 +36,9 @@ export const Tile = ({ value, position, zIndex }: Props) => {
     }
   }, [shallHighlight, scale]);
 
+  /**
+   * Converts tile position from array index to pixels.
+   */
   const positionToPixels = (position: number) => {
     return (position / tileCount) * (containerWidth as number);
   };
@@ -39,7 +47,7 @@ export const Tile = ({ value, position, zIndex }: Props) => {
     top: positionToPixels(position[1]),
     left: positionToPixels(position[0]),
     transform: `scale(${scale})`,
-    zIndex,
+    zIndex
   };
 
   return (
